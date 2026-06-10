@@ -2,16 +2,14 @@
 
 import { useEffect, useState } from "react"
 import { motion, useDragControls } from "framer-motion"
+import { getViews } from "@/lib/views"
 
 export default function VisitorWidget() {
   const [count, setCount] = useState<number | null>(null)
   const dragControls = useDragControls()
 
   useEffect(() => {
-    fetch("/api/views")
-      .then((r) => r.json())
-      .then((d) => { if (d.count !== null) setCount(d.count) })
-      .catch(() => {})
+    getViews().then((c) => { if (c !== null) setCount(c) })
   }, [])
 
   return (

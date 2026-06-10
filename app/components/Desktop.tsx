@@ -23,9 +23,10 @@ const KONAMI = ["ArrowUp","ArrowUp","ArrowDown","ArrowDown","ArrowLeft","ArrowRi
 
 export default function Desktop({ posts }: { posts: PostMeta[] }) {
   const [isMobile, setIsMobile] = useState<boolean | null>(null)
-  // Achievements opens pre-stacked behind About — closing About reveals it.
-  const [openWindows, setOpenWindows] = useState<WindowId[]>(["achievements", "about"])
-  const [windowOrder, setWindowOrder] = useState<WindowId[]>(["achievements", "about"])
+  // Pre-stacked on load: About in front, Achievements behind it, Chat third —
+  // closing a window reveals the next one down.
+  const [openWindows, setOpenWindows] = useState<WindowId[]>(["chat", "achievements", "about"])
+  const [windowOrder, setWindowOrder] = useState<WindowId[]>(["chat", "achievements", "about"])
   const [contextMenu, setContextMenu] = useState<{ x: number; y: number } | null>(null)
   const [showAboutOverlay, setShowAboutOverlay] = useState(false)
   const [konamiActive, setKonamiActive] = useState(false)

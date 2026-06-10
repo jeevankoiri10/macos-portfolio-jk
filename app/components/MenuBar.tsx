@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 // Initials in the top-left come from /config/siteConfig.ts.
 import { siteConfig } from "@/config/siteConfig"
+import { getViews } from "@/lib/views"
 
 export default function MenuBar({ focusedApp }: { focusedApp: string | null }) {
   const [timeStr, setTimeStr] = useState("")
@@ -21,10 +22,7 @@ export default function MenuBar({ focusedApp }: { focusedApp: string | null }) {
   }, [])
 
   useEffect(() => {
-    fetch("/api/views")
-      .then((r) => r.json())
-      .then((d) => { if (d.count !== null) setVisits(d.count) })
-      .catch(() => {})
+    getViews().then((c) => { if (c !== null) setVisits(c) })
   }, [])
 
   return (
