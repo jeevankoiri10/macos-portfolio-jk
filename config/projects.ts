@@ -1,14 +1,15 @@
 /**
  * projects.ts
- * ─────────────────────────────────────────────────────────────
+ * ─────────────────────────────────────────────────────────────────────
  * All projects shown in the Projects window.
  * Split into two lists: `personal` (side projects) and `client`
  * (paid / contracted work). Both use the same ProjectItem shape.
  *
  *  - `tech`   → array of tags rendered beneath the description.
- *  - `stars`  → optional — shown next to the title if present.
+ *  - `stars`  → optional — shown next to the title if present
+ *               (used here for Play Store ratings).
  *  - `status` → optional — rendered as a pill (e.g. "Paused").
- * ─────────────────────────────────────────────────────────────
+ * ─────────────────────────────────────────────────────────────────────
  */
 
 export interface ProjectItem {
@@ -28,33 +29,48 @@ export interface ProjectsConfig {
 export const projects: ProjectsConfig = {
   personal: [
     {
-      title: "Example Project",
-      description: "One-sentence description of what you built and why it matters.",
-      tech: ["TypeScript", "Next.js", "PostgreSQL"],
-      stars: 42,
-      link: "https://github.com/janedeveloper/example-project",
+      title: "CTEVT Plus",
+      description:
+        "Flutter production app with 5K+ downloads and a 4.3+ star rating on Google Play. Built completely from scratch — BLoC architecture, Firebase backend, OAuth 2.0, admin panel.",
+      tech: ["Flutter", "BLoC", "Firebase", "Dart"],
+      stars: 4.3,
+      status: "5K+ downloads",
+      link: "https://play.google.com/store/apps/details?id=com.one.ctevt_plus",
     },
     {
-      title: "Another Project",
-      description: "A second example. Keep each description tight — two lines max reads best.",
-      tech: ["Go", "Redis"],
-      link: "https://github.com/janedeveloper/another-project",
+      title: "Agriculture Loksewa",
+      description:
+        "Flutter app for agriculture exam preparation, free for all students with a Firebase backend. Published on Google Play with 5K+ downloads and a 4.7 star rating.",
+      tech: ["Flutter", "Firebase", "Dart"],
+      stars: 4.7,
+      status: "5K+ downloads",
+      link: "https://play.google.com/store/apps/details?id=com.one.agriculture_loksewa",
     },
     {
-      title: "Paused Experiment",
-      description: "A project you started but haven't touched in a while — mark it with a status.",
-      tech: ["Rust"],
-      status: "Paused",
-      link: "https://github.com/janedeveloper/experiment",
+      title: "Detection & Locating of Humans",
+      description:
+        "Complete hardware + AI + app system using thermal infrared cameras and YOLO. Real-time location detection via a Flutter app — built to help national parks detect poachers in darkness. Top 12, ICT Award 2023.",
+      tech: ["Flutter", "Python", "YOLO", "Firebase", "Thermal Imaging"],
+      status: "ICT Award Top 12",
+      link: "https://youtu.be/eK8zrcieS8k",
     },
   ],
 
   client: [
     {
-      title: "Client Work Sample",
-      description: "Replace with a short, neutral description of client work you want to show off.",
-      tech: ["React", "TailwindCSS"],
-      link: "https://example.com",
+      title: "MyNewEarth",
+      description:
+        "Holistic wellness app on the App Store. Built frontend UI with Nylo (Flutter), CRUD operations with Firebase, and RESTful API integration with a Django backend.",
+      tech: ["Flutter", "Nylo", "Firebase", "Django", "REST APIs"],
+      status: "App Store",
+      link: "https://apps.apple.com/us/app/mynewearth/id6447554498",
+    },
+    {
+      title: "San Trekking",
+      description:
+        "Trekking company website built with Next.js — fully designed and developed using Claude Code. Live on Vercel.",
+      tech: ["Next.js", "React", "Claude Code"],
+      link: "https://san-trekking.vercel.app",
     },
   ],
 }
@@ -67,11 +83,19 @@ export interface ResumeProjectItem {
 
 export const resumeProjects: ResumeProjectItem[] = [
   {
-    name: "Example Project",
-    desc: "Slightly longer description suitable for a résumé — focus on outcomes, scale, and the specific technologies involved.",
+    name: "CTEVT Plus",
+    desc: "Co-founded and shipped a Flutter exam-prep app from scratch — BLoC architecture, Firebase backend, OAuth 2.0, admin panel. 5K+ downloads, 4.3+ stars on Google Play.",
   },
   {
-    name: "Another Project",
-    desc: "Second résumé-worthy project. Two lines is plenty.",
+    name: "Agriculture Loksewa",
+    desc: "Flutter app for agriculture Loksewa exam preparation, free for all students. 5K+ downloads and a 4.7 star rating on Google Play.",
+  },
+  {
+    name: "Detection & Locating of Humans",
+    desc: "Thermal-infrared + YOLO detection system with a Flutter app for real-time alerts, designed to detect poachers in darkness. Top 12 Innovation, ICT Award 2023.",
+  },
+  {
+    name: "San Trekking",
+    desc: "Modern, responsive trekking company website built with Next.js and Claude Code, deployed on Vercel.",
   },
 ]

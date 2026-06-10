@@ -1,10 +1,10 @@
 /**
  * links.ts
- * ─────────────────────────────────────────────────────────────
- * Curated external reading list shown in the LinksWidget on the
- * desktop. Each entry is an outbound link with a short tag used
- * for display only.
- * ─────────────────────────────────────────────────────────────
+ * ─────────────────────────────────────────────────────────────────────
+ * Curated external links shown in the LinksWidget on the desktop.
+ * Each entry is an outbound link with a short tag used for display
+ * only. Used here for Jeevan's profiles across the web.
+ * ─────────────────────────────────────────────────────────────────────
  */
 
 export interface LinkItem {
@@ -16,9 +16,12 @@ export interface LinkItem {
 }
 
 export const links: LinkItem[] = [
-  { title: "The Zen of Erlang",      author: "Fred Hebert",     url: "https://ferd.ca/the-zen-of-erlang.html",                  tag: "systems" },
-  { title: "Fearless Concurrency",   author: "The Rust Book",   url: "https://doc.rust-lang.org/book/ch16-00-concurrency.html", tag: "rust" },
-  { title: "without.boats",          author: "withoutboats",    url: "https://without.boats",                                   tag: "rust" },
-  { title: "Meditations",            author: "Marcus Aurelius", url: "https://www.gutenberg.org/ebooks/2680",                   tag: "philosophy" },
-  { title: "Solana Program Library", author: "Solana Labs",     url: "https://spl.solana.com",                                  tag: "solana" },
+  { title: "Hire me on Upwork",      author: "Upwork",     url: "https://www.upwork.com/freelancers/~01ba229c2bc9c90602", tag: "freelance" },
+  { title: "LinkedIn",               author: "Jeevan Koiri", url: "https://www.linkedin.com/in/jeevankoiri/",             tag: "network" },
+  { title: "Writing on Medium",      author: "@jeevankoiri", url: "https://medium.com/@jeevankoiri",                      tag: "blog" },
+  { title: "CTEVT Plus",             author: "Google Play",  url: "https://play.google.com/store/apps/details?id=com.one.ctevt_plus", tag: "app" },
+  { title: "Agriculture Loksewa",    author: "Google Play",  url: "https://play.google.com/store/apps/details?id=com.one.agriculture_loksewa", tag: "app" },
+  { title: "Tutoring — TeacherOn",   author: "TeacherOn",    url: "https://www.teacheron.com/tutor/dbew",                 tag: "teaching" },
+  { title: "Tutoring — Prosikshya",  author: "Prosikshya",   url: "https://prosikshya.com/tutor/jeevan-koiri",            tag: "teaching" },
+  { title: "Book a call",            author: "Cal.com",      url: "https://cal.com/jeevan-koiri-2hoh5s",                  tag: "meet" },
 ]

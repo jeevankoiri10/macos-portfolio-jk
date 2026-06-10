@@ -1,10 +1,10 @@
 /**
  * terminal.ts
- * ─────────────────────────────────────────────────────────────
+ * ─────────────────────────────────────────────────────────────────────
  * Payloads for the interactive Terminal window. Each entry is the
  * content printed by a command or a virtual file. Lines are shown
  * verbatim — an empty string renders as a blank line.
- * ─────────────────────────────────────────────────────────────
+ * ─────────────────────────────────────────────────────────────────────
  */
 
 export interface TerminalConfig {
@@ -26,41 +26,45 @@ export interface TerminalConfig {
 
 export const terminal: TerminalConfig = {
   about: [
-    "Name:   Jane Developer",
-    "Age:    20",
-    "Base:   Earth",
-    "Role:   Software Engineer",
+    "Name:   Jeevan Koiri",
+    "Base:   Kathmandu, Nepal",
+    "Role:   Flutter Developer",
     "",
-    "Short bio line one.",
-    "Short bio line two.",
+    "3 published apps on Google Play and the App Store.",
+    "5K+ downloads, 4.3+ star ratings.",
+    "From ideation to store deployment — full app lifecycle.",
   ],
   skills: [
-    "Languages:  TypeScript · Go · Python",
-    "Frontend:   React · Next.js · TailwindCSS",
-    "Backend:    Node.js · PostgreSQL · Redis",
-    "DevOps:     Docker · AWS · Vercel",
+    "Mobile:     Flutter · Dart · BLoC · Firebase",
+    "Frontend:   Next.js · React · TypeScript",
+    "Backend:    Django · Python · REST APIs",
+    "AI/ML:      YOLO · PyTorch · Computer Vision",
+    "Tools:      Git · Power BI · Figma · Claude Code",
   ],
   experience: [
-    "Acme Corp    Jan 2024 – Present   Senior Software Engineer",
-    "Globex       2022 – 2023          Software Engineer",
-    "Initech      Summer 2021          Intern",
+    "CG Electronics + DroneWorx.ai   Apr 2025 – Dec 2025   Software Engineer",
+    "MyNewEarth (Remote, Cyprus)     Nov 2024 – Mar 2025   Frontend & AI Developer",
+    "CTEVT Plus, Kathmandu           Apr 2023 – Nov 2024   Co-founder & Mobile Dev",
+    "EZ Online Solutions             Nov 2023 – Dec 2023   Flutter Intern",
   ],
   contact: [
-    "email:    hello@example.com",
-    "github:   github.com/janedeveloper",
-    "twitter:  x.com/janedeveloper",
-    "cal:      cal.com/janedeveloper",
+    "email:    jeevankoirima@gmail.com",
+    "phone:    +977 9807590455",
+    "github:   github.com/jeevankoiri10",
+    "twitter:  x.com/koiri_jeevan",
+    "upwork:   upwork.com/freelancers/~01ba229c2bc9c90602",
+    "cal:      cal.com/jeevan-koiri-2hoh5s",
   ],
   resume: [
     "Opening résumé…",
-    "→ example.com/resume",
+    "→ /Jeevan_Koiri_CV.pdf",
   ],
   whoami: [
-    "Jane Developer",
-    "Software Engineer · Earth",
+    "Jeevan Koiri",
+    "Flutter Developer · Kathmandu, Nepal",
     "",
-    "A short, opinionated sentence about",
-    "what you build and why it matters.",
+    "I ship production apps — 3 published,",
+    "5K+ downloads, 4.3+ star ratings.",
   ],
-  githubJson: `{"login":"janedeveloper","name":"Jane Developer","bio":"Software Engineer","public_repos":42}`,
+  githubJson: `{"login":"jeevankoiri10","name":"Jeevan Koiri","bio":"Flutter Developer — I ship production apps","location":"Nepal"}`,
 }

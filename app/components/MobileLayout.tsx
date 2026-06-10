@@ -7,6 +7,8 @@ import Projects from "./sections/Projects"
 import Blogs from "./sections/Blogs"
 import Contact from "./sections/Contact"
 import Resume from "./sections/Resume"
+import Achievements from "./sections/Achievements"
+import PhoneViewer from "./sections/PhoneViewer"
 // Initials + footer name come from /config/siteConfig.ts.
 import { siteConfig } from "@/config/siteConfig"
 import type { PostMeta } from "@/lib/posts"
@@ -15,6 +17,8 @@ const NAV = [
   { id: "about",      label: "About" },
   { id: "experience", label: "Experience" },
   { id: "projects",   label: "Projects" },
+  { id: "appdemo",    label: "App Demo" },
+  { id: "achievements", label: "Achievements" },
   { id: "writing",    label: "Writing" },
   { id: "contact",    label: "Contact" },
   { id: "resume",     label: "Résumé" },
@@ -106,6 +110,14 @@ export default function MobileLayout({ posts }: { posts: PostMeta[] }) {
 
       <section id="projects" style={{ borderBottom: BORDER }}>
         <Projects compact />
+      </section>
+
+      <section id="appdemo" style={{ borderBottom: BORDER }}>
+        <PhoneViewer compact />
+      </section>
+
+      <section id="achievements" style={{ borderBottom: BORDER }}>
+        <Achievements compact />
       </section>
 
       <section id="writing" style={{ borderBottom: BORDER }}>

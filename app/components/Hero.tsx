@@ -1,11 +1,19 @@
 "use client"
 
 import Image from 'next/image'
-import { Twitter, Github, BookOpen } from 'lucide-react'
+import { motion } from 'framer-motion'
+import { Twitter, Github, BookOpen, ScrollText } from 'lucide-react'
 // Text + social links come from /config/siteConfig.ts.
 import { siteConfig } from '@/config/siteConfig'
 
-export default function Hero({ compact = false }: { compact?: boolean }) {
+export default function Hero({
+  compact = false,
+  onOpenResume,
+}: {
+  compact?: boolean
+  /** Opens the Résumé window on desktop; mobile falls back to the #resume anchor. */
+  onOpenResume?: () => void
+}) {
   const { personal, social } = siteConfig
 
   return (
@@ -30,6 +38,36 @@ export default function Hero({ compact = false }: { compact?: boolean }) {
       <p className="text-[13px] leading-[1.75]" style={{ color: "var(--text-secondary)" }}>
         {personal.tagline}
       </p>
+
+      {/* View Résumé — opens the Résumé window (desktop) or jumps to #resume (mobile) */}
+      <motion.a
+        href={onOpenResume ? undefined : "#resume"}
+        role="button"
+        tabIndex={0}
+        onClick={(e) => {
+          if (!onOpenResume) return
+          e.preventDefault()
+          onOpenResume()
+        }}
+        onKeyDown={(e) => {
+          if (onOpenResume && (e.key === "Enter" || e.key === " ")) {
+            e.preventDefault()
+            onOpenResume()
+          }
+        }}
+        whileHover={{ scale: 1.03 }}
+        whileTap={{ scale: 0.96 }}
+        transition={{ type: "spring", damping: 22, stiffness: 420 }}
+        className="inline-flex items-center gap-2 self-start mt-5 px-4 py-2 rounded-lg font-mono text-[10px] uppercase tracking-[0.14em] cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+        style={{
+          background: "rgba(255,255,255,0.07)",
+          border: "1px solid rgba(255,255,255,0.1)",
+          color: "var(--text-primary)",
+        }}
+      >
+        <ScrollText size={13} />
+        View Résumé
+      </motion.a>
 
       {/* Footer */}
       <div

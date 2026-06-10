@@ -23,8 +23,9 @@ const KONAMI = ["ArrowUp","ArrowUp","ArrowDown","ArrowDown","ArrowLeft","ArrowRi
 
 export default function Desktop({ posts }: { posts: PostMeta[] }) {
   const [isMobile, setIsMobile] = useState<boolean | null>(null)
-  const [openWindows, setOpenWindows] = useState<WindowId[]>(["about"])
-  const [windowOrder, setWindowOrder] = useState<WindowId[]>(["about"])
+  // Achievements opens pre-stacked behind About — closing About reveals it.
+  const [openWindows, setOpenWindows] = useState<WindowId[]>(["achievements", "about"])
+  const [windowOrder, setWindowOrder] = useState<WindowId[]>(["achievements", "about"])
   const [contextMenu, setContextMenu] = useState<{ x: number; y: number } | null>(null)
   const [showAboutOverlay, setShowAboutOverlay] = useState(false)
   const [konamiActive, setKonamiActive] = useState(false)
@@ -124,6 +125,10 @@ export default function Desktop({ posts }: { posts: PostMeta[] }) {
         const terminalProps = win.id === "terminal"
           ? { onOpen: toggleWindow, onClose: () => closeWindow("terminal") }
           : {}
+        // Hero's "View Résumé" button opens the Résumé window.
+        const aboutProps = win.id === "about"
+          ? { onOpenResume: () => toggleWindow("resume") }
+          : {}
         return (
           <MacWindow
             key={win.id}
@@ -139,7 +144,7 @@ export default function Desktop({ posts }: { posts: PostMeta[] }) {
             offsetX={win.offsetX}
             offsetY={win.offsetY}
           >
-            <Section compact {...extraProps} {...terminalProps} />
+            <Section compact {...extraProps} {...terminalProps} {...aboutProps} />
           </MacWindow>
         )
       })}

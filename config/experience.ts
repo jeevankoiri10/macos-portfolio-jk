@@ -1,6 +1,6 @@
 /**
  * experience.ts
- * ─────────────────────────────────────────────────────────────
+ * ─────────────────────────────────────────────────────────────────────
  *  - `experience`        → full cards shown in the Experience window
  *                          (click one to open a modal with achievements + links).
  *  - `resumeExperience`  → condensed bullets shown on the Résumé window.
@@ -9,7 +9,7 @@
  *
  * The two experience lists are separate on purpose: the main site shows
  * every role, while the résumé groups multiple roles into summaries.
- * ─────────────────────────────────────────────────────────────
+ * ─────────────────────────────────────────────────────────────────────
  */
 
 export interface ExperienceItem {
@@ -28,39 +28,57 @@ export interface ExperienceItem {
 
 export const experience: ExperienceItem[] = [
   {
-    company: "Acme Corp",
-    role: "Senior Software Engineer",
-    period: "Jan 2024 – Present",
-    description: "Short one-line summary of what you do here.",
-    tech: ["TypeScript", "React", "Node.js", "PostgreSQL"],
+    company: "CG Electronics Pvt. Ltd. + DroneWorx.ai",
+    role: "Software Engineer",
+    period: "Apr 2025 – Dec 2025",
+    description: "Data dashboards, automation, and AI-powered tools across service operations and robotics.",
+    tech: ["Power BI", "Python", "Selenium", "Next.js", "ROS", "Gazebo", "YOLO", "Streamlit"],
     achievements: [
-      "Led the migration of a critical service from X to Y with zero downtime.",
-      "Mentored three junior engineers through design reviews and pairing.",
-      "Shipped a feature that drove a measurable 12% improvement in activation.",
+      "Developed Power BI dashboards tracking 35K+ service calls monthly, reducing call resolution time by 20%.",
+      "Built Python Selenium automation for 25,000+ inventory items, reducing manual entry by 40%.",
+      "Built a Next.js app with ROS & Gazebo for an autonomous weedcutter vehicle (DroneWorx.ai, part-time).",
+      "Developed a Streamlit app for concealed weapon detection using a YOLO model.",
     ],
   },
   {
-    company: "Globex",
-    role: "Software Engineer",
-    period: "Jun 2022 – Dec 2023",
-    description: "What you built here, in a sentence.",
-    tech: ["Go", "Kubernetes", "Redis"],
+    company: "MyNewEarth",
+    role: "Frontend & AI Developer",
+    period: "Nov 2024 – Mar 2025",
+    description: "Remote role (Cyprus, Europe) building a holistic wellness app available on the App Store.",
+    tech: ["Flutter", "Nylo", "Firebase", "Django", "Android Studio", "Git"],
     achievements: [
-      "Built and owned the internal deploy pipeline used by 40+ engineers.",
-      "Reduced p99 latency of the core API from 800ms to 110ms.",
+      "Helped build the MyNewEarth holistic wellness app, available on the App Store.",
+      "Worked with the Nylo framework for UI and CRUD operations with the Rowy Firebase database.",
+      "Integrated RESTful APIs from Django with Swagger documentation.",
     ],
     links: [
-      { type: "website", url: "https://example.com", label: "example.com" },
+      { type: "website", url: "https://apps.apple.com/us/app/mynewearth/id6447554498", label: "App Store" },
     ],
   },
   {
-    company: "Initech",
-    role: "Software Engineering Intern",
-    period: "Summer 2021",
-    description: "Your internship — one line.",
-    tech: ["Python", "AWS"],
+    company: "CTEVT Plus, Kathmandu",
+    role: "Co-founder & Mobile Application Developer",
+    period: "Apr 2023 – Nov 2024",
+    description: "Co-founded and shipped an exam-prep app to 5K+ downloads on Google Play.",
+    tech: ["Flutter", "BLoC", "Firebase", "OAuth 2.0", "Dart"],
     achievements: [
-      "Wrote an internal data pipeline tool still in use today.",
+      "Co-founded and deployed CTEVT Plus on the Play Store — 5K+ downloads, 4.3+ star rating.",
+      "Designed, built, and released the app with a Firebase backend, OAuth 2.0, and an admin panel.",
+      "Also built and deployed ktmacademy.com.",
+    ],
+    links: [
+      { type: "website", url: "https://play.google.com/store/apps/details?id=com.one.ctevt_plus", label: "Google Play" },
+    ],
+  },
+  {
+    company: "EZ Online Solutions Pvt. Ltd., Kathmandu",
+    role: "Flutter Engineer Intern",
+    period: "Nov 2023 – Dec 2023",
+    description: "Built mobile and web frontends to support hotel businesses in Nepal.",
+    tech: ["Flutter", "Figma", "Git", "Android SDK", "APIs", "MVC"],
+    achievements: [
+      "Created frontends for a mobile application and website facilitating hotel businesses in Nepal.",
+      "Worked with Flutter, Figma, Git, the Android SDK, APIs, and MVC architecture.",
     ],
   },
 ]
@@ -78,27 +96,45 @@ export interface ResumeExperienceItem {
 
 export const resumeExperience: ResumeExperienceItem[] = [
   {
-    company: "Acme Corp",
-    role: "Senior Software Engineer",
-    period: "Jan 2024 – Present",
+    company: "CG Electronics Pvt. Ltd.",
+    role: "Software Engineer",
+    period: "Apr 2025 – Dec 2025",
+    subRoles: ["DroneWorx.ai (part-time)"],
     bullets: [
-      "Led the migration of a critical service from X to Y with zero downtime.",
-      "Mentored three junior engineers through design reviews and pairing.",
-      "Shipped a feature that drove a measurable 12% improvement in activation.",
+      "Power BI dashboards tracking 35K+ service calls monthly — call resolution time down 20%.",
+      "Python Selenium automation for 25,000+ inventory items — manual entry down 40%.",
+      "Next.js + ROS/Gazebo app for an autonomous weedcutter; YOLO-based weapon-detection Streamlit app.",
     ],
   },
   {
-    company: "Globex",
-    role: "Software Engineer",
-    period: "Jun 2022 – Dec 2023",
+    company: "MyNewEarth (Remote, Cyprus)",
+    role: "Frontend & AI Developer",
+    period: "Nov 2024 – Mar 2025",
     bullets: [
-      "Built and owned the internal deploy pipeline used by 40+ engineers.",
-      "Reduced p99 latency of the core API from 800ms to 110ms.",
+      "Built the MyNewEarth wellness app (App Store) with Nylo (Flutter) and Firebase.",
+      "Integrated Django REST APIs with Swagger documentation.",
+    ],
+  },
+  {
+    company: "CTEVT Plus, Kathmandu",
+    role: "Co-founder & Mobile App Developer",
+    period: "Apr 2023 – Nov 2024",
+    bullets: [
+      "Shipped CTEVT Plus to 5K+ downloads and a 4.3+ rating — Firebase, OAuth 2.0, admin panel.",
+      "Built and deployed ktmacademy.com.",
+    ],
+  },
+  {
+    company: "EZ Online Solutions Pvt. Ltd.",
+    role: "Flutter Engineer Intern",
+    period: "Nov 2023 – Dec 2023",
+    bullets: [
+      "Built mobile and web frontends for hotel businesses in Nepal.",
     ],
   },
 ]
 
-// ── Education + Teaching ─────────────────────────────────────────────
+// ── Education + Teaching ──────────────────────────────────────────────
 
 export interface EducationItem {
   school: string
@@ -107,12 +143,13 @@ export interface EducationItem {
 }
 
 export const education: EducationItem = {
-  school: "State University",
-  degree: "B.Sc. — Computer Science",
-  period: "2018 – 2022",
+  school: "Pulchowk Campus, IOE, Tribhuvan University",
+  degree: "B.E. — Electronics, Communication & Information Engineering (76.27%)",
+  period: "Dec 2019 – Mar 2024",
 }
 
 export const teaching: string[] = [
-  "Ran a weekend study group on data structures for ~15 local students.",
-  "Guest-lectured an intro-to-web-dev class at my alma mater.",
+  "Taught 100+ students in Computer Science, Engineering Mathematics, and programming.",
+  "Available for secondary, +2, and bachelor-level tutoring in Nepali, English, and Hindi.",
+  "Tutor profiles on TeacherOn and Prosikshya.",
 ]

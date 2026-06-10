@@ -10,8 +10,8 @@ export default function MenuBar({ focusedApp }: { focusedApp: string | null }) {
   useEffect(() => {
     const update = () => {
       const now = new Date()
-      setTimeStr(now.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hour12: false }))
-      setDateStr(now.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" }))
+      setTimeStr(now.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false }))
+      setDateStr(now.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric", year: "numeric" }))
     }
     update()
     const timer = setInterval(update, 1000)

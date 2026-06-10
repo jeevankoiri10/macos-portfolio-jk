@@ -1,12 +1,12 @@
 /**
  * uses.ts
- * ─────────────────────────────────────────────────────────────
+ * ─────────────────────────────────────────────────────────────────────
  * Data for the /uses-style window. Group your tools by category;
  * each item has a name and an optional short note.
  *
  * Categories and counts are fully flexible — the UI iterates over
  * whatever you provide.
- * ─────────────────────────────────────────────────────────────
+ * ─────────────────────────────────────────────────────────────────────
  */
 
 export interface UseItem {
@@ -22,44 +22,46 @@ export interface UseGroup {
 
 export const uses: UseGroup[] = [
   {
-    category: "Hardware",
+    category: "Mobile",
     items: [
-      { name: "MacBook Pro", note: "primary machine" },
-      { name: "External 4K Monitor" },
-      { name: "Mechanical Keyboard" },
-      { name: "Noise-cancelling Headphones" },
+      { name: "Flutter", note: "daily driver" },
+      { name: "Dart" },
+      { name: "BLoC", note: "state management" },
+      { name: "Firebase", note: "backend + auth" },
     ],
   },
   {
-    category: "Editor",
+    category: "Editor & IDE",
     items: [
-      { name: "VS Code", note: "daily driver" },
-      { name: "Neovim", note: "when I want a distraction" },
-    ],
-  },
-  {
-    category: "Terminal",
-    items: [
-      { name: "iTerm2" },
-      { name: "zsh + Starship", note: "prompt" },
-    ],
-  },
-  {
-    category: "Tools",
-    items: [
-      { name: "Raycast", note: "launcher" },
-      { name: "Linear", note: "project tracking" },
-      { name: "Notion", note: "docs" },
+      { name: "VS Code" },
+      { name: "Android Studio", note: "emulators + builds" },
       { name: "Figma", note: "UI work" },
     ],
   },
   {
-    category: "Stack defaults",
+    category: "AI tools",
     items: [
-      { name: "TypeScript" },
+      { name: "Claude Code", note: "built San Trekking with it" },
+      { name: "Codex" },
+      { name: "YOLO + PyTorch", note: "computer vision" },
+    ],
+  },
+  {
+    category: "Web",
+    items: [
       { name: "Next.js", note: "web" },
-      { name: "PostgreSQL", note: "data" },
+      { name: "React" },
+      { name: "TypeScript" },
       { name: "Vercel", note: "deploy" },
+    ],
+  },
+  {
+    category: "Backend & data",
+    items: [
+      { name: "Django", note: "REST APIs" },
+      { name: "Python" },
+      { name: "Power BI", note: "dashboards" },
+      { name: "Git" },
     ],
   },
 ]

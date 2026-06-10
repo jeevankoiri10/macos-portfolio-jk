@@ -25,4 +25,6 @@ export * from "./notes"
 export * from "./uses"
 export * from "./themes"
 export * from "./status"
+export * from "./achievements"
+export * from "./appdemos"
 // Blog content has moved to /content/blog (MDX). Read via lib/posts.ts.
