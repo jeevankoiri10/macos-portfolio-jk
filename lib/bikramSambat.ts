@@ -147,3 +147,23 @@ export function toBikramSambat(adDate: Date): BSDate | null {
   }
   return null
 }
+
+/** Days in a given BS month, or null outside the table range. */
+export function bsDaysInMonth(year: number, month: number): number | null {
+  return BS_MONTH_DAYS[year - BS_EPOCH_YEAR]?.[month] ?? null
+}
+
+/**
+ * AD date (UTC-normalized) of day 1 of a given BS month — used to
+ * find the weekday a BS month starts on. Null outside table range.
+ */
+export function bsMonthStartAD(year: number, month: number): Date | null {
+  const yearIdx = year - BS_EPOCH_YEAR
+  if (!BS_MONTH_DAYS[yearIdx]) return null
+  let daysPassed = 1
+  for (let i = 0; i < yearIdx; i++) {
+    for (let m = 0; m < 12; m++) daysPassed += BS_MONTH_DAYS[i][m]
+  }
+  for (let m = 0; m < month; m++) daysPassed += BS_MONTH_DAYS[yearIdx][m]
+  return new Date(BS_EPOCH_AD_UTC + daysPassed * MS_PER_DAY)
+}

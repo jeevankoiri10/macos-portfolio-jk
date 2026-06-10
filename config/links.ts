@@ -21,7 +21,7 @@ export const links: LinkItem[] = [
   { title: "Writing on Medium",      author: "@jeevankoiri", url: "https://medium.com/@jeevankoiri",                      tag: "blog" },
   { title: "CTEVT Plus",             author: "Google Play",  url: "https://play.google.com/store/apps/details?id=com.one.ctevt_plus", tag: "app" },
   { title: "Agriculture Loksewa",    author: "Google Play",  url: "https://play.google.com/store/apps/details?id=com.one.agriculture_loksewa", tag: "app" },
-  { title: "Tutoring — TeacherOn",   author: "TeacherOn",    url: "https://www.teacheron.com/tutor/dbew",                 tag: "teaching" },
-  { title: "Tutoring — Prosikshya",  author: "Prosikshya",   url: "https://prosikshya.com/tutor/jeevan-koiri",            tag: "teaching" },
+  { title: "Tutoring - TeacherOn",   author: "TeacherOn",    url: "https://www.teacheron.com/tutor/dbew",                 tag: "teaching" },
+  { title: "Tutoring - Prosikshya",  author: "Prosikshya",   url: "https://prosikshya.com/tutor/jeevan-koiri",            tag: "teaching" },
   { title: "Book a call",            author: "Cal.com",      url: "https://cal.com/jeevan-koiri-2hoh5s",                  tag: "meet" },
 ]

@@ -4,7 +4,7 @@
  * Data for the /uses-style window. Group your tools by category;
  * each item has a name and an optional short note.
  *
- * Categories and counts are fully flexible — the UI iterates over
+ * Categories and counts are fully flexible - the UI iterates over
  * whatever you provide.
  * ─────────────────────────────────────────────────────────────────────
  */

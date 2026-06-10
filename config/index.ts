@@ -1,7 +1,7 @@
 /**
  * config/index.ts
  * ─────────────────────────────────────────────────────────────
- * Barrel file — re-exports every config module so components can
+ * Barrel file - re-exports every config module so components can
  * import from a single path:
  *
  *     import { siteConfig, projects, experience } from "@/config"
@@ -27,4 +27,5 @@ export * from "./themes"
 export * from "./status"
 export * from "./achievements"
 export * from "./appdemos"
+export * from "./chat"
 // Blog content has moved to /content/blog (MDX). Read via lib/posts.ts.

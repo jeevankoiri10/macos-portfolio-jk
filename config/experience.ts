@@ -62,7 +62,7 @@ export const experience: ExperienceItem[] = [
     description: "Co-founded and shipped an exam-prep app to 5K+ downloads on Google Play.",
     tech: ["Flutter", "BLoC", "Firebase", "OAuth 2.0", "Dart"],
     achievements: [
-      "Co-founded and deployed CTEVT Plus on the Play Store — 5K+ downloads, 4.3+ star rating.",
+      "Co-founded and deployed CTEVT Plus on the Play Store - 5K+ downloads, 4.3+ star rating.",
       "Designed, built, and released the app with a Firebase backend, OAuth 2.0, and an admin panel.",
       "Also built and deployed ktmacademy.com.",
     ],
@@ -101,8 +101,8 @@ export const resumeExperience: ResumeExperienceItem[] = [
     period: "Apr 2025 – Dec 2025",
     subRoles: ["DroneWorx.ai (part-time)"],
     bullets: [
-      "Power BI dashboards tracking 35K+ service calls monthly — call resolution time down 20%.",
-      "Python Selenium automation for 25,000+ inventory items — manual entry down 40%.",
+      "Power BI dashboards tracking 35K+ service calls monthly - call resolution time down 20%.",
+      "Python Selenium automation for 25,000+ inventory items - manual entry down 40%.",
       "Next.js + ROS/Gazebo app for an autonomous weedcutter; YOLO-based weapon-detection Streamlit app.",
     ],
   },
@@ -120,7 +120,7 @@ export const resumeExperience: ResumeExperienceItem[] = [
     role: "Co-founder & Mobile App Developer",
     period: "Apr 2023 – Nov 2024",
     bullets: [
-      "Shipped CTEVT Plus to 5K+ downloads and a 4.3+ rating — Firebase, OAuth 2.0, admin panel.",
+      "Shipped CTEVT Plus to 5K+ downloads and a 4.3+ rating - Firebase, OAuth 2.0, admin panel.",
       "Built and deployed ktmacademy.com.",
     ],
   },
@@ -144,7 +144,7 @@ export interface EducationItem {
 
 export const education: EducationItem = {
   school: "Pulchowk Campus, IOE, Tribhuvan University",
-  degree: "B.E. — Electronics, Communication & Information Engineering (76.27%)",
+  degree: "B.E. - Electronics, Communication & Information Engineering (76.27%)",
   period: "Dec 2019 – Mar 2024",
 }
 

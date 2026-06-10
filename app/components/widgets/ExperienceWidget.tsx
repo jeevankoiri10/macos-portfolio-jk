@@ -3,10 +3,10 @@
 import { useState } from "react"
 import { motion, useDragControls, AnimatePresence } from "framer-motion"
 import { ArrowUpRight } from "lucide-react"
-// Reading list lives in /config/links.ts.
-import { links as LINKS } from "@/config/links"
+// Roles live in /config/experience.ts — same data as the Experience window.
+import { experience } from "@/config/experience"
 
-export default function LinksWidget() {
+export default function ExperienceWidget({ onOpenExperience }: { onOpenExperience?: () => void }) {
   const dragControls = useDragControls()
   const [hovered, setHovered] = useState<number | null>(null)
 
@@ -27,18 +27,17 @@ export default function LinksWidget() {
       <div className="widget-body">
         <div className="px-3 pt-2.5 pb-1" style={{ borderBottom: "1px solid var(--separator)" }}>
           <p className="font-mono text-[9px] uppercase tracking-[0.1em]" style={{ color: "var(--text-faint)" }}>
-            Links · worth reading
+            Experiences
           </p>
         </div>
 
-        {LINKS.map((link, i) => (
-          <a
+        {experience.map((job, i) => (
+          <button
             key={i}
-            href={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-between px-3 py-2 group"
-            style={{ borderBottom: i < LINKS.length - 1 ? "1px solid var(--item-separator)" : undefined }}
+            type="button"
+            onClick={onOpenExperience}
+            className="w-full text-left flex items-center justify-between px-3 py-2 group cursor-pointer focus:outline-none focus-visible:ring-1 focus-visible:ring-white/60"
+            style={{ borderBottom: i < experience.length - 1 ? "1px solid var(--item-separator)" : undefined }}
             onMouseEnter={() => setHovered(i)}
             onMouseLeave={() => setHovered(null)}
           >
@@ -47,10 +46,10 @@ export default function LinksWidget() {
                 className="text-[11px] leading-tight truncate transition-colors"
                 style={{ color: hovered === i ? "var(--text-primary)" : "var(--text-secondary)" }}
               >
-                {link.title}
+                {job.company}
               </p>
-              <p className="font-mono text-[9px] mt-0.5" style={{ color: "var(--text-faint)" }}>
-                {link.author} · {link.tag}
+              <p className="font-mono text-[9px] mt-0.5 truncate" style={{ color: "var(--text-faint)" }}>
+                {job.role} · {job.period}
               </p>
             </div>
             <AnimatePresence>
@@ -66,7 +65,7 @@ export default function LinksWidget() {
                 </motion.div>
               )}
             </AnimatePresence>
-          </a>
+          </button>
         ))}
       </div>
     </motion.div>

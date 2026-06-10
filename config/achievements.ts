@@ -106,7 +106,7 @@ export const gallery: GalleryItem[] = [
   },
   {
     name: "TEDxIOE Pulchowk",
-    role: "Video Lead — TEDxIOE Pulchowk 2024",
+    role: "Video Lead - TEDxIOE Pulchowk 2024",
     platform: "Certificate",
     image: "/testimonials/tedx-ioe.jpg",
   },

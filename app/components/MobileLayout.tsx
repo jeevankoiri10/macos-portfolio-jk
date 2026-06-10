@@ -9,6 +9,7 @@ import Contact from "./sections/Contact"
 import Resume from "./sections/Resume"
 import Achievements from "./sections/Achievements"
 import PhoneViewer from "./sections/PhoneViewer"
+import Chat from "./sections/Chat"
 // Initials + footer name come from /config/siteConfig.ts.
 import { siteConfig } from "@/config/siteConfig"
 import type { PostMeta } from "@/lib/posts"
@@ -19,6 +20,7 @@ const NAV = [
   { id: "projects",   label: "Projects" },
   { id: "appdemo",    label: "App Demo" },
   { id: "achievements", label: "Achievements" },
+  { id: "chat",       label: "Chat" },
   { id: "writing",    label: "Writing" },
   { id: "contact",    label: "Contact" },
   { id: "resume",     label: "Résumé" },
@@ -118,6 +120,10 @@ export default function MobileLayout({ posts }: { posts: PostMeta[] }) {
 
       <section id="achievements" style={{ borderBottom: BORDER }}>
         <Achievements compact />
+      </section>
+
+      <section id="chat" style={{ borderBottom: BORDER }}>
+        <Chat compact />
       </section>
 
       <section id="writing" style={{ borderBottom: BORDER }}>

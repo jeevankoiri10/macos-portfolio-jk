@@ -6,9 +6,9 @@
  * (paid / contracted work). Both use the same ProjectItem shape.
  *
  *  - `tech`   → array of tags rendered beneath the description.
- *  - `stars`  → optional — shown next to the title if present
+ *  - `stars`  → optional - shown next to the title if present
  *               (used here for Play Store ratings).
- *  - `status` → optional — rendered as a pill (e.g. "Paused").
+ *  - `status` → optional - rendered as a pill (e.g. "Paused").
  * ─────────────────────────────────────────────────────────────────────
  */
 
@@ -31,7 +31,7 @@ export const projects: ProjectsConfig = {
     {
       title: "CTEVT Plus",
       description:
-        "Flutter production app with 5K+ downloads and a 4.3+ star rating on Google Play. Built completely from scratch — BLoC architecture, Firebase backend, OAuth 2.0, admin panel.",
+        "Flutter production app with 5K+ downloads and a 4.3+ star rating on Google Play. Built completely from scratch - BLoC architecture, Firebase backend, OAuth 2.0, admin panel.",
       tech: ["Flutter", "BLoC", "Firebase", "Dart"],
       stars: 4.3,
       status: "5K+ downloads",
@@ -49,7 +49,7 @@ export const projects: ProjectsConfig = {
     {
       title: "Detection & Locating of Humans",
       description:
-        "Complete hardware + AI + app system using thermal infrared cameras and YOLO. Real-time location detection via a Flutter app — built to help national parks detect poachers in darkness. Top 12, ICT Award 2023.",
+        "Complete hardware + AI + app system using thermal infrared cameras and YOLO. Real-time location detection via a Flutter app - built to help national parks detect poachers in darkness. Top 12, ICT Award 2023.",
       tech: ["Flutter", "Python", "YOLO", "Firebase", "Thermal Imaging"],
       status: "ICT Award Top 12",
       link: "https://youtu.be/eK8zrcieS8k",
@@ -68,7 +68,7 @@ export const projects: ProjectsConfig = {
     {
       title: "San Trekking",
       description:
-        "Trekking company website built with Next.js — fully designed and developed using Claude Code. Live on Vercel.",
+        "Trekking company website built with Next.js - fully designed and developed using Claude Code. Live on Vercel.",
       tech: ["Next.js", "React", "Claude Code"],
       link: "https://san-trekking.vercel.app",
     },
@@ -84,7 +84,7 @@ export interface ResumeProjectItem {
 export const resumeProjects: ResumeProjectItem[] = [
   {
     name: "CTEVT Plus",
-    desc: "Co-founded and shipped a Flutter exam-prep app from scratch — BLoC architecture, Firebase backend, OAuth 2.0, admin panel. 5K+ downloads, 4.3+ stars on Google Play.",
+    desc: "Co-founded and shipped a Flutter exam-prep app from scratch - BLoC architecture, Firebase backend, OAuth 2.0, admin panel. 5K+ downloads, 4.3+ stars on Google Play.",
   },
   {
     name: "Agriculture Loksewa",

@@ -4,7 +4,7 @@
  * Skills grouped by category. Keys become category labels on the
  * left; values become the chip list on the right.
  *
- * Add, remove, or rename categories freely — the Résumé section
+ * Add, remove, or rename categories freely - the Résumé section
  * iterates over Object.entries(skills), so the UI adapts.
  * ─────────────────────────────────────────────────────────────────────
  */

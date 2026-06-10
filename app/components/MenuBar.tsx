@@ -1,6 +1,8 @@
 "use client"
 
 import { useState, useEffect } from "react"
+// Initials in the top-left come from /config/siteConfig.ts.
+import { siteConfig } from "@/config/siteConfig"
 
 export default function MenuBar({ focusedApp }: { focusedApp: string | null }) {
   const [timeStr, setTimeStr] = useState("")
@@ -32,7 +34,7 @@ export default function MenuBar({ focusedApp }: { focusedApp: string | null }) {
     >
       <div className="flex items-center gap-3">
         <span className="font-mono text-[11px] font-semibold uppercase tracking-widest" style={{ color: "rgba(255,255,255,0.9)" }}>
-          CB
+          {siteConfig.personal.initials}
         </span>
         <span style={{ color: "rgba(255,255,255,0.15)", fontSize: 10 }}>|</span>
         <span className="font-mono text-[11px] tracking-wide" style={{ color: "rgba(255,255,255,0.4)" }}>

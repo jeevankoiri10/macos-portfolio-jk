@@ -7,7 +7,7 @@
  *
  *   1. Import your section component.
  *   2. Append an entry here with a unique `id`.
- *   3. That's it — it shows up in the dock and the window layer.
+ *   3. That's it - it shows up in the dock and the window layer.
  *
  * `component` receives `{ compact: true }` when rendered inside
  * a MacWindow. All built-in section components already accept
@@ -18,7 +18,7 @@
 import {
   User, Briefcase, Code2, BookOpen, Mail,
   ScrollText, TerminalSquare, Cpu, NotebookPen,
-  Trophy, Smartphone,
+  Trophy, Smartphone, MessageCircle,
   type LucideIcon,
 } from "lucide-react"
 import type { PostMeta } from "@/lib/posts"
@@ -34,6 +34,7 @@ import Uses       from "@/app/components/sections/Uses"
 import Notes      from "@/app/components/sections/Notes"
 import Achievements from "@/app/components/sections/Achievements"
 import PhoneViewer  from "@/app/components/sections/PhoneViewer"
+import Chat         from "@/app/components/sections/Chat"
 
 /** Extra data threaded from the server into a window (e.g. blog posts). */
 export interface WindowContext {
@@ -46,7 +47,7 @@ export interface WindowContext {
 export type WindowId =
   | "about" | "experience" | "projects" | "blogs" | "contact"
   | "resume" | "terminal" | "uses" | "notes"
-  | "achievements" | "appdemo"
+  | "achievements" | "appdemo" | "chat"
 
 export interface WindowDef {
   id: WindowId
@@ -56,7 +57,7 @@ export interface WindowDef {
   /** Default window size in px. */
   width: number
   height: number
-  /** Offset from centre — lets multiple windows stagger nicely. */
+  /** Offset from centre - lets multiple windows stagger nicely. */
   offsetX: number
   offsetY: number
   /** The component rendered inside the window. Different sections accept
@@ -78,6 +79,7 @@ export const windows: WindowDef[] = [
   { id: "notes",      title: "Notes",      icon: NotebookPen,    width: 500, height: 480, offsetX: -40, offsetY: -25, component: Notes },
   { id: "achievements", title: "Achievements", icon: Trophy,     width: 620, height: 580, offsetX:  25, offsetY: -15, component: Achievements },
   { id: "appdemo",    title: "App Demo",   icon: Smartphone,     width: 430, height: 740, offsetX: -25, offsetY:   5, component: PhoneViewer },
+  { id: "chat",       title: "Chat",       icon: MessageCircle,  width: 440, height: 580, offsetX:  35, offsetY:  10, component: Chat },
 ]
 
 /** Helper used by the Desktop to look up a window by id. */

@@ -10,7 +10,7 @@ import GitHubHeatmap from "./GitHubHeatmap"
 import NowPlaying from "./NowPlaying"
 import StatusWidget from "./widgets/StatusWidget"
 import QuoteWidget from "./widgets/QuoteWidget"
-import LinksWidget from "./widgets/LinksWidget"
+import ExperienceWidget from "./widgets/ExperienceWidget"
 import CalendarWidget from "./widgets/CalendarWidget"
 import VisitorWidget from "./widgets/VisitorWidget"
 import ThemeWidget from "./widgets/ThemeWidget"
@@ -129,11 +129,13 @@ export default function Desktop({ posts }: { posts: PostMeta[] }) {
         const aboutProps = win.id === "about"
           ? { onOpenResume: () => toggleWindow("resume") }
           : {}
+        // Chat's action buttons can open other windows.
+        const chatProps = win.id === "chat" ? { onOpenWindow: toggleWindow } : {}
         return (
           <MacWindow
             key={win.id}
             windowId={win.id}
-            title={win.id === "resume" ? `Résumé — ${siteConfig.personal.fullName}` : win.title}
+            title={win.id === "resume" ? `Résumé · ${siteConfig.personal.fullName}` : win.title}
             isOpen={openWindows.includes(win.id)}
             isFocused={focusedWindow === win.id}
             onClose={() => closeWindow(win.id)}
@@ -144,7 +146,7 @@ export default function Desktop({ posts }: { posts: PostMeta[] }) {
             offsetX={win.offsetX}
             offsetY={win.offsetY}
           >
-            <Section compact {...extraProps} {...terminalProps} {...aboutProps} />
+            <Section compact {...extraProps} {...terminalProps} {...aboutProps} {...chatProps} />
           </MacWindow>
         )
       })}
@@ -152,7 +154,7 @@ export default function Desktop({ posts }: { posts: PostMeta[] }) {
       {/* Desktop widgets */}
       <QuoteWidget />
       <StatusWidget />
-      <LinksWidget />
+      <ExperienceWidget onOpenExperience={() => toggleWindow("experience")} />
       <CalendarWidget />
       <VisitorWidget />
       <ThemeWidget />

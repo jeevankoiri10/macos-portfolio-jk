@@ -33,7 +33,7 @@ export default function VisitorWidget() {
           Visitors
         </p>
         <p className="text-[28px] font-semibold leading-none" style={{ color: "var(--text-primary)" }}>
-          {count !== null ? count.toLocaleString() : "—"}
+          {count !== null ? count.toLocaleString() : "-"}
         </p>
         <p className="font-mono text-[9px] mt-1.5" style={{ color: "var(--text-muted)" }}>
           total visits

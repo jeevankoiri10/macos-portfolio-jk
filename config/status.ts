@@ -4,7 +4,7 @@
  * Data for the StatusWidget shown in the desktop's top-right
  * corner. Flip `available` to false to render a muted indicator.
  *
- * The `currently` rows are free-form "label + value" pairs — add
+ * The `currently` rows are free-form "label + value" pairs - add
  * or remove as many as you want.
  * ─────────────────────────────────────────────────────────────────────
  */
@@ -27,6 +27,6 @@ export const status: StatusConfig = {
   currently: [
     { label: "Building", value: "Production Flutter apps for clients" },
     { label: "Writing",  value: "About viral apps, on Medium" },
-    { label: "Teaching", value: "CS & Mathematics — 100+ students" },
+    { label: "Teaching", value: "CS & Mathematics - 100+ students" },
   ],
 }

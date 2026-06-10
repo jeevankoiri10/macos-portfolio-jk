@@ -75,7 +75,7 @@ export default function Achievements({ compact = false }: { compact?: boolean })
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={g.image}
-                alt={`${g.platform} — ${g.name}`}
+                alt={`${g.platform} - ${g.name}`}
                 className="w-full h-full object-cover object-top transition-transform group-hover:scale-[1.03]"
               />
               <span
@@ -200,7 +200,7 @@ export default function Achievements({ compact = false }: { compact?: boolean })
               >
                 <div className="min-w-0">
                   <p className="text-[12px] font-semibold text-white truncate">
-                    {viewer.name} — {viewer.role}
+                    {viewer.name} · {viewer.role}
                   </p>
                   <p className="font-mono text-[9px] uppercase tracking-[0.08em]" style={{ color: "var(--text-faint)" }}>
                     {viewer.platform}
@@ -219,7 +219,7 @@ export default function Achievements({ compact = false }: { compact?: boolean })
               </div>
               <div className="max-h-[70vh] overflow-y-auto">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={viewer.image} alt={`${viewer.platform} — ${viewer.name}`} className="w-full h-auto" />
+                <img src={viewer.image} alt={`${viewer.platform} - ${viewer.name}`} className="w-full h-auto" />
               </div>
             </motion.div>
           </motion.div>

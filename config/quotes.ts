@@ -12,7 +12,7 @@ export const quotes: string[] = [
   "From ideation to Play Store deployment.",
   "I ship products that users love.",
   "Ship, then refine.",
-  "Distribution is a feature — build it in from day one.",
+  "Distribution is a feature - build it in from day one.",
   "Production-ready beats demo-ready.",
   "Small, honest progress beats heroic bursts.",
   "The best code is the code you didn't write.",

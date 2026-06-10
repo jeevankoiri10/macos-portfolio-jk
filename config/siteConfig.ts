@@ -23,7 +23,7 @@ export interface Personal {
   shortRole: string
   /** One-paragraph bio shown in the Hero. */
   tagline: string
-  /** "City, Country" — displayed in Hero footer and résumé header. */
+  /** "City, Country" - displayed in Hero footer and résumé header. */
   location: string
   age: number | string
   /** Path (in /public) to your avatar image. */
@@ -90,7 +90,7 @@ export const siteConfig: SiteConfig = {
     role: "Flutter Developer",
     shortRole: "Flutter & Full-Stack Developer",
     tagline:
-      "Flutter Developer with 3 published apps on Google Play and the App Store — 5K+ downloads and 4.3+ star ratings. From ideation to store deployment I handle the full app lifecycle, with full-stack skills in Next.js, Django, and Python, plus experience integrating AI/ML into mobile apps.",
+      "Flutter Developer with 3 published apps on Google Play and the App Store - 5K+ downloads and 4.3+ star ratings. From ideation to store deployment I handle the full app lifecycle, with full-stack skills in Next.js, Django, and Python, plus experience integrating AI/ML into mobile apps.",
     location: "Kathmandu, Nepal",
     age: "3+ yrs shipping",
     avatar: "/userjk.png",
@@ -119,9 +119,9 @@ export const siteConfig: SiteConfig = {
   },
 
   seo: {
-    title: "Jeevan Koiri — Flutter Developer",
+    title: "Jeevan Koiri | Flutter Developer",
     description:
-      "Portfolio of Jeevan Koiri — Flutter Developer with 3 published apps, 5K+ downloads, and full-stack + AI/ML experience.",
+      "Portfolio of Jeevan Koiri - Flutter Developer with 3 published apps, 5K+ downloads, and full-stack + AI/ML experience.",
   },
 
   resumeLink: "/Jeevan_Koiri_CV.pdf",

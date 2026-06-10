@@ -65,60 +65,60 @@
   --text-faint: rgba(255,185,90,0.2);
 }
 
-/* ── Crimson — near-black base with deep crimson accents ──────────────────── */
-[data-theme="crimson"] {
-  --bg-base: rgba(10,1,3,0.68);
-  --bg-dot: rgba(200,18,38,0.055);
-  --titlebar-bg: rgba(18,2,5,0.84);
-  --window-bg: rgba(22,3,7,0.90);
-  --terminal-bg: rgba(14,2,4,0.86);
-  --menubar-bg: rgba(10,1,3,0.84);
-  --window-border-focused: rgba(210,25,50,0.30);
-  --window-border-unfocused: rgba(190,15,35,0.10);
+/* ── Ocean — near-black base with deep blue accents ───────────────────────── */
+[data-theme="ocean"] {
+  --bg-base: rgba(1,4,10,0.68);
+  --bg-dot: rgba(50,130,240,0.055);
+  --titlebar-bg: rgba(2,8,18,0.84);
+  --window-bg: rgba(3,10,22,0.90);
+  --terminal-bg: rgba(2,6,14,0.86);
+  --menubar-bg: rgba(1,4,10,0.84);
+  --window-border-focused: rgba(60,145,255,0.30);
+  --window-border-unfocused: rgba(45,125,235,0.10);
 
-  --widget-bg: rgba(20,2,6,0.90);
-  --widget-border: rgba(210,25,50,0.12);
-  --drag-handle-bg: rgba(200,18,38,0.04);
-  --item-separator: rgba(210,25,50,0.07);
-  --dock-bg: rgba(14,1,4,0.93);
-  --tooltip-bg: rgba(16,2,5,0.98);
+  --widget-bg: rgba(2,9,20,0.90);
+  --widget-border: rgba(60,145,255,0.12);
+  --drag-handle-bg: rgba(50,130,240,0.04);
+  --item-separator: rgba(60,145,255,0.07);
+  --dock-bg: rgba(1,6,14,0.93);
+  --tooltip-bg: rgba(2,8,18,0.98);
 
-  --accent: rgba(210,30,55,0.9);
-  --accent-subtle: rgba(210,30,55,0.18);
-  --heatmap-empty: rgba(200,20,40,0.07);
-  --separator: rgba(210,25,50,0.08);
+  --accent: rgba(60,145,255,0.9);
+  --accent-subtle: rgba(60,145,255,0.18);
+  --heatmap-empty: rgba(50,130,240,0.07);
+  --separator: rgba(60,145,255,0.08);
 
-  --text-secondary: rgba(255,140,140,0.48);
-  --text-muted: rgba(255,110,110,0.26);
-  --text-faint: rgba(255,100,100,0.2);
+  --text-secondary: rgba(150,200,255,0.48);
+  --text-muted: rgba(120,180,255,0.26);
+  --text-faint: rgba(110,170,255,0.2);
 }
 
-/* ── Rust — warm black base with burnt orange accents ─────────────────────── */
-[data-theme="rust"] {
-  --bg-base: rgba(12,6,0,0.68);
-  --bg-dot: rgba(255,115,25,0.06);
-  --titlebar-bg: rgba(22,10,0,0.84);
-  --window-bg: rgba(28,13,0,0.90);
-  --terminal-bg: rgba(18,8,0,0.86);
-  --menubar-bg: rgba(12,6,0,0.84);
-  --window-border-focused: rgba(255,120,35,0.28);
-  --window-border-unfocused: rgba(240,100,20,0.10);
+/* ── Forest — dark green base with emerald accents ────────────────────────── */
+[data-theme="forest"] {
+  --bg-base: rgba(0,9,4,0.68);
+  --bg-dot: rgba(50,200,115,0.06);
+  --titlebar-bg: rgba(1,16,8,0.84);
+  --window-bg: rgba(2,20,11,0.90);
+  --terminal-bg: rgba(1,13,7,0.86);
+  --menubar-bg: rgba(0,9,4,0.84);
+  --window-border-focused: rgba(55,205,120,0.28);
+  --window-border-unfocused: rgba(45,190,105,0.10);
 
-  --widget-bg: rgba(24,11,0,0.90);
-  --widget-border: rgba(255,120,35,0.12);
-  --drag-handle-bg: rgba(255,115,25,0.04);
-  --item-separator: rgba(255,115,25,0.07);
-  --dock-bg: rgba(16,7,0,0.93);
-  --tooltip-bg: rgba(18,8,0,0.98);
+  --widget-bg: rgba(2,18,10,0.90);
+  --widget-border: rgba(55,205,120,0.12);
+  --drag-handle-bg: rgba(50,200,115,0.04);
+  --item-separator: rgba(50,200,115,0.07);
+  --dock-bg: rgba(1,11,6,0.93);
+  --tooltip-bg: rgba(1,13,7,0.98);
 
-  --accent: rgba(255,120,35,0.9);
-  --accent-subtle: rgba(255,120,35,0.18);
-  --heatmap-empty: rgba(255,115,25,0.07);
-  --separator: rgba(255,115,25,0.08);
+  --accent: rgba(55,205,120,0.9);
+  --accent-subtle: rgba(55,205,120,0.18);
+  --heatmap-empty: rgba(50,200,115,0.07);
+  --separator: rgba(50,200,115,0.08);
 
-  --text-secondary: rgba(255,200,130,0.48);
-  --text-muted: rgba(255,180,100,0.26);
-  --text-faint: rgba(255,165,80,0.2);
+  --text-secondary: rgba(160,235,190,0.48);
+  --text-muted: rgba(130,225,170,0.26);
+  --text-faint: rgba(115,215,155,0.2);
 }
 
 @theme inline {
@@ -167,12 +167,12 @@ body::after {
   background: radial-gradient(circle at 30% 75%, #c8741c 0%, #2a1550 45%, #0a0418 100%);
   opacity: 1;
 }
-[data-theme="crimson"] .album-wallpaper {
-  background: radial-gradient(circle at 50% 60%, #c21934 0%, #3a0712 45%, #0a0103 100%);
+[data-theme="ocean"] .album-wallpaper {
+  background: radial-gradient(circle at 50% 60%, #1a6fd4 0%, #07203a 45%, #01060f 100%);
   opacity: 1;
 }
-[data-theme="rust"] .album-wallpaper {
-  background: radial-gradient(circle at 70% 70%, #e66b1f 0%, #3d1800 45%, #120600 100%);
+[data-theme="forest"] .album-wallpaper {
+  background: radial-gradient(circle at 70% 70%, #1fa45e 0%, #0a3d22 45%, #001208 100%);
   opacity: 1;
 }
 

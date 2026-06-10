@@ -3,7 +3,7 @@
  * ─────────────────────────────────────────────────────────────────────
  * Payloads for the interactive Terminal window. Each entry is the
  * content printed by a command or a virtual file. Lines are shown
- * verbatim — an empty string renders as a blank line.
+ * verbatim - an empty string renders as a blank line.
  * ─────────────────────────────────────────────────────────────────────
  */
 
@@ -32,7 +32,7 @@ export const terminal: TerminalConfig = {
     "",
     "3 published apps on Google Play and the App Store.",
     "5K+ downloads, 4.3+ star ratings.",
-    "From ideation to store deployment — full app lifecycle.",
+    "From ideation to store deployment - full app lifecycle.",
   ],
   skills: [
     "Mobile:     Flutter · Dart · BLoC · Firebase",
@@ -63,8 +63,8 @@ export const terminal: TerminalConfig = {
     "Jeevan Koiri",
     "Flutter Developer · Kathmandu, Nepal",
     "",
-    "I ship production apps — 3 published,",
+    "I ship production apps - 3 published,",
     "5K+ downloads, 4.3+ star ratings.",
   ],
-  githubJson: `{"login":"jeevankoiri10","name":"Jeevan Koiri","bio":"Flutter Developer — I ship production apps","location":"Nepal"}`,
+  githubJson: `{"login":"jeevankoiri10","name":"Jeevan Koiri","bio":"Flutter Developer - I ship production apps","location":"Nepal"}`,
 }
